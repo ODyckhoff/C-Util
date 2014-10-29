@@ -46,6 +46,10 @@ char *strrep(char *orig, char *rep, char *with) {
         orig += len_front + len_rep; // move to next "end of rep"
     }
     strcpy(tmp, orig);
+
+    free(ins);
+    free(tmp);
+
     return result;
 }
 
@@ -74,6 +78,9 @@ char **strsplit(char *instr, const char *delim) {
             n++;
         }
     }   
+
+    free(token);
+    free(str);
 
     return rtn;
 }
