@@ -10,3 +10,4 @@ String Utils.
 
 * strrep - replaces a substring with another.
 * strsplit - splits a string into an array of strings.
+* strrev - gnirts a ni sretcarahc lla esrever.
