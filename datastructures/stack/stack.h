@@ -3,19 +3,19 @@
 
 #define DEFAULT_SIZE 10
 
-typedef void *element_t;
+typedef void *s_ele_t;
 
 typedef struct stack_t {
 
-    element_t *elements;
+    s_ele_t *elements;
     int count;
     int max;
 
 } stack_t;
 
 stack_t *stack_init( );
-int stack_unshift( stack_t *stack, element_t item );
-element_t stack_shift( stack_t *stack );
+int stack_unshift( stack_t *stack, s_ele_t item );
+s_ele_t stack_shift( stack_t *stack );
 int stack_isEmtpy( stack_t *stack );
 int stack_isFull( stack_t *stack );
 

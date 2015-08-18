@@ -1,7 +1,7 @@
 
 /* stack.c */
 
-/* BEGIN QUEUE
+/* BEGIN STACK
  * ===========
  * Stacks are a first in, last out (FILO) datastructure,
  *   so you must ensure that items only get added to and
@@ -31,12 +31,12 @@ stack_t *stack_init( int size ) {
 
     s->max = size;
     s->count = 0;
-    s->elements = malloc( size * sizeof( element_t ) );
+    s->elements = malloc( size * sizeof( s_ele_t ) );
 
     return q;
 }
 
-int stack_unshift( stack_t *stack, element_t item ) {
+int stack_unshift( stack_t *stack, s_ele_t item ) {
     if( stack_isFull( stack ) )
         return 1;
     else {
@@ -46,8 +46,8 @@ int stack_unshift( stack_t *stack, element_t item ) {
     return 0;
 }
 
-element_t stack_shift( stack_t *stack ) {
-    element_t item;
+s_ele_t stack_shift( stack_t *stack ) {
+    s_ele_t item;
     if( stack_isEmpty( stack ) )
         return NULL;
     else {

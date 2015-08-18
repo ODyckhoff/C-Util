@@ -41,12 +41,12 @@ queue_t *queue_init( int size ) {
     q->max = size;
     q->head = 0;
     q->count = 0;
-    q->elements = malloc( size * sizeof( element_t ) );
+    q->elements = malloc( size * sizeof( q_ele_t ) );
 
     return q;
 }
 
-int queue_push( queue_t *queue, element_t item ) {
+int queue_push( queue_t *queue, q_ele_t item ) {
     if( queue_isFull( queue ) )
         return 1;
     else {
@@ -56,8 +56,8 @@ int queue_push( queue_t *queue, element_t item ) {
     return 0;
 }
 
-element_t queue_pop( queue_t *queue ) {
-    element_t item;
+q_ele_t queue_pop( queue_t *queue ) {
+    q_ele_t item;
     if( queue_isEmpty( queue ) )
         return NULL;
     else {
