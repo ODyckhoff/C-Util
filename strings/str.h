@@ -11,6 +11,9 @@ char **strsplit(char *instr, const char *delim);
 char *strsep( char **stringp, char *delim );
 
 /* .gnirts a ni sretcarahc lla esreveR */
-void strrev(char *str);
+void strrev( char *str );
+
+/* Duplicates a string. */
+char *strdup( const char *s );
 
 #endif /* STR_H */
