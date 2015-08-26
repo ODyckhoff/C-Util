@@ -37,7 +37,7 @@ int del_ll_index( linkedlist_t *ll, ll_ele_t element ) {
     ll_node_t *cur;
     ll_node_t *last;
 
-    if( isEmpty( ll ) ) return 1;
+    if( ll_isEmpty( ll ) ) return 1;
 
     cur = ll->head;
     do {
@@ -68,7 +68,7 @@ int add_ll_index( linkedlist_t *ll, ll_ele_t item, (*sort_hndlr)() ) {
 
     if( sort_hndlr == NULL ) sort_hndlr = ll_sort;
 
-    if( isEmpty( ll ) ) { 
+    if( ll_isEmpty( ll ) ) { 
         ll->head = ins;
         return 0;
     }
@@ -114,7 +114,7 @@ void ll_free( linkedlist_t *ll ) {
     ll_node_t *tmp;
     cur = ll->head;
 
-    if( ! isEmpty( ll ) ) {
+    if( ! ll_isEmpty( ll ) ) {
         while( ( tmp = cur->next ) != null ) {
             free( cur );
             cur = tmp;
@@ -130,6 +130,6 @@ int ll_sort( ll_ele_t *a, ll_ele_t *b ) {
     if( a > b ) return 1;
 }
 
-int isEmpty( linkedlist_t *ll ) {
+int ll_isEmpty( linkedlist_t *ll ) {
     return ( ll->head == NULL );
 }

@@ -28,7 +28,8 @@ ll_node_t *ll_node_init( ll_ele_t element );
 int del_ll_index( linkedlist_t *ll, ll_ele_t element );
 int add_ll_index( linkedlist_t *ll, ll_ele_t item, (*sort_hndlr)() );
 void ll_free( linkedlist_t *ll );
+void ll_node_free( linkedlist_t *ll, ll_ele_t element );
 int ll_sort( ll_ele_t *a, ll_ele_t *b );
-int isEmpty( linked_list_t *ll );
+int ll_isEmpty( linked_list_t *ll );
 
 #endif /* __DATASTRUCTURES_LINKEDLIST_H */
