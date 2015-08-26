@@ -5,7 +5,7 @@
 char *strrep(char *orig, char *rep, char *with);
 
 /* String split into array of strings. */
-char **strsplit(char *instr, const char *delim);
+char **strsplit(char *instr, char *delim);
 
 /* Return first split elmement from String. */
 char *strsep( char **stringp, char *delim );

@@ -24,7 +24,7 @@ char *strrep(char *orig, char *rep, char *with) {
     len_with = strlen(with);
 
     ins = orig;
-    for (count = 0; tmp = strstr(ins, rep); ++count) {
+    for( count = 0; ( tmp = strstr(ins, rep) ); ++count ) {
         ins = tmp + len_rep;
     }
 
@@ -54,7 +54,7 @@ char *strrep(char *orig, char *rep, char *with) {
     return result;
 }
 
-char **strsplit(char *instr, const char *delim) {
+char **strsplit( char *instr, char *delim ) {
 
     char *token;
     char *str;
